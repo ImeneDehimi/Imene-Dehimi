@@ -1,0 +1,61 @@
+.work{
+    color: var(--light-gray);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+    line-height: 1.6;
+    padding: 20px 25px;
+
+}
+.work h2{
+    font-size: var(--fs-1);
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+.preview{
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    width: 400px;
+    height: 170px;
+}
+.preview::after{
+    content: url("./../../assets/icon-view.svg");
+    background: hsla(0, 0%, 21%, 0.694);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: var(--transition-1);
+
+}
+.preview:hover::after{
+    opacity: 1;
+
+}
+.preview img{
+    width: 100%;
+    display: block;
+}
+.site{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+.text{
+    width: 340px;
+}
+.text h5{
+    font-size: var(--fs-1);
+    color: var(--vegas-gold);
+    word-spacing: 3px;
+    font-weight: var(--fw-500);
+}
+.text p{
+    font-size: var(--fs-5);
+    color: var(--light-gray-70);
+}

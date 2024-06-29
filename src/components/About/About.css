@@ -1,0 +1,61 @@
+.about {
+    color: var(--light-gray);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+    line-height: 1.6;
+    padding: 20px 25px;
+}
+.about h2{
+    font-size: var(--fs-1);
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+.about-text{
+  margin-bottom: 20px;
+}
+.short-line{
+    width: 50px;
+    height: 5px;
+    display: flex;
+    background: var(--text-gradient-yellow);
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+.skill{
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: var(--border-gradient-onyx);
+    padding: 15px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-2);
+    z-index: 1;
+}
+
+  .skill::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: var(--bg-gradient-jet);
+    border-radius: inherit;
+    z-index: -1;
+  }
+  .skill{
+    color: var(--light-gray);
+    font-size: var(--fs-4);
+    font-weight: var(--fw-3);
+    line-height: 1.6;
+  }
+  .skill-icon{
+    font-size: 24px;
+    color: var(--vegas-gold);
+    margin-right: 7px;
+  }
+  

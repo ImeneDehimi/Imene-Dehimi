@@ -1,0 +1,28 @@
+.navbar  ul{
+    display: flex;
+    align-items: center;
+    background: hsla(240, 1%, 17%, 0.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--jet);
+    border-radius: 0 20px;
+    width: fit-content;
+}
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar ul a li{
+    list-style: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.navbar ul a {
+    text-decoration: none;
+    color: var(--light-gray);
+}
+.navbar ul a li:hover{
+    color: var(--light-gray-70);
+}
+.navbar ul a.active{
+color: var(--vegas-gold);
+}
