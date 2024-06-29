@@ -56,7 +56,8 @@
   form textarea::placeholder { font-weight: var(--fw-500); }
   
   .contact-form form input:focus,
-  form textarea:focus{ border-color: var(--orange-yellow-crayola); }
+  form textarea:focus{ border-color: var(--orange-yellow-crayola);
+ }
   
   .button button{
     cursor: pointer;
@@ -75,12 +76,6 @@
     z-index: 1;
     transition: var(--transition-1);
   }
-  /* .button button:hover {
-    color: var(--second-bg-color);
-    transform: transLateX(5px);
-    background: transparent;
-    border: 2px solid var(--second-bg-color);
-  } */
   .button button::before {
     content: "";
     position: absolute;

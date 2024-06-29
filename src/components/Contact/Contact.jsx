@@ -1,14 +1,44 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import NavBar from '../navbar/NavBar';
 import SideNav from '../sidenav/SideNav';
 import './Contact.css';
+import emailjs from "@emailjs/browser"; 
+import { useRef } from 'react';
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+console.log(e.target.value);
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_YOUR_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: import.meta.env.VITE_YOUR_PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          toast.success("Email sent successfully!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          toast.error(`Failed to send email`);
+        }
+      );
+  };
     return (
         <>
+        <ToastContainer />
     <div className='container'>
       <SideNav></SideNav>
       <div className='main'>
             <NavBar></NavBar>
+            
             <div className="contact">
             <div className="contact-text">
         <h2>Contact</h2>
@@ -21,17 +51,17 @@ const Contact = () => {
         </div>
       </div>
       <div className="contact-form">
-        <form>
-          <input id="name" type="text" placeholder="Enter Your Name" required />
+        <form ref={form} onSubmit={sendEmail}>
+          <input name="name" type="text" placeholder="Enter Your Name" required />
           <input
-            id="email"
+            name="email"
             type="email"
             placeholder="Enter Your Email"
             required
           />
-          <input id="subject" type="" placeholder="Enter Your Subject" />
+          <input name="subject" type="text" placeholder="Enter Your Subject" />
           <textarea
-            id="message"
+            name="message"
             cols="10"
             rows="10"
             placeholder="Enter Your Message"
