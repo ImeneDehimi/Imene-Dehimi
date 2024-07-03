@@ -90,3 +90,12 @@
   
   .button button:hover::before { background: var(--bg-gradient-yellow-2); }
   
+
+  @media (max-width: 450px) {
+    .contact{
+      display: block;
+    }
+    .contact-text{
+      width: 100%;
+    }
+  }

@@ -6,6 +6,7 @@
     border: 1px solid var(--jet);
     border-radius: 0 20px;
     width: fit-content;
+    z-index: 9;
 }
 .navbar{
     display: flex;
@@ -26,3 +27,20 @@
 .navbar ul a.active{
 color: var(--vegas-gold);
 }
+
+@media (max-width: 450px) {
+
+  
+    .navbar  ul{
+        position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: hsla(240, 1%, 17%, 0.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--jet);
+    border-radius: 12px 12px 0 0;
+    box-shadow: var(--shadow-2);
+    z-index: 5;
+    }
+  }

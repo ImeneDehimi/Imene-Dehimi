@@ -12,3 +12,14 @@ background-color: hsl(0, 0%, 7%);
   display: flex;
   gap: 30px;
 }
+
+@media (max-width: 450px) {
+  .container{
+    display: block;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  body{
+    position: relative;
+  }
+}

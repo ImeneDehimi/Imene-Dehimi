@@ -15,7 +15,7 @@ const Work = () => {
           <div className="work">
             <h2>My work</h2>
             <span className="short-line"></span>
-            <div className="site">
+            <div className="site site1">
             <Link target="blank" to={"https://handyman-home-services.netlify.app/"}>
               <div className="preview">               
                 <img src={website1} alt="" />

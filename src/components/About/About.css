@@ -23,6 +23,7 @@
 }
 .skills{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 15px;
@@ -57,5 +58,14 @@
     font-size: 24px;
     color: var(--vegas-gold);
     margin-right: 7px;
+  }
+
+
+  @media (max-width: 450px) {
+
+  
+    .skills{justify-content: start;}
+
+  
   }
   
